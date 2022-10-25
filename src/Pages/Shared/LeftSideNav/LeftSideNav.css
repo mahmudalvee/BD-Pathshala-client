@@ -1,0 +1,13 @@
+.link{
+    text-decoration: none;
+}
+
+.txt-link{
+    color: darkblue;
+    font-weight: bolder;
+    font-size: large;
+}
+
+.txt-link:hover{
+    color: rgb(136, 173, 1);
+}
