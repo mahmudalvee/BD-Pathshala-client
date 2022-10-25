@@ -1,0 +1,13 @@
+.footer-bg {
+  background-color: rgb(19, 0, 48);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: max-content;
+}
+
+.nav-title {
+  color: yellow !important;
+  font-family: "CharukolaUltraLight", sans-serif;
+  font-weight: bolder;
+}
