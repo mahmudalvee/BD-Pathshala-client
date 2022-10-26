@@ -2,6 +2,13 @@
     text-decoration: none;
 }
 
+.txt-link-head{
+    color: darkblue;
+    font-weight: bolder;
+    font-size: xx-large;
+}
+
+
 .txt-link{
     color: darkblue;
     font-weight: bolder;

@@ -13,18 +13,16 @@ const LeftSideNav = () => {
   }, []);
 
   return (
-    <div>
-      <h3>Left Side: {categories.length}</h3>
-      <div className="App">
-        <ListGroup>
+    <div className="App">
+      <ListGroup>
+      <ListGroup.Item className="bg-warning txt-link-head"><h3>All Courses: {categories.length}</h3></ListGroup.Item>
             {
                 categories.map(category => <Link className="link" to={`/course-category/${category.id}`}
                     key={category.id}>
                         <ListGroup.Item className="txt-link" variant="info">{category.name}</ListGroup.Item>
                     </Link> )
             }
-        </ListGroup>
-      </div>
+      </ListGroup>
     </div>
   );
 };

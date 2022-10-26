@@ -2,15 +2,17 @@
     color: yellow !important;
 font-family: 'CharukolaUltraLight', sans-serif;
 font-weight: bolder;
+font-size: xx-large;
 }
 
 .header-bg{
     width: 100%;
-    background-image: linear-gradient(to right,rgb(19, 0, 48), rgb(255, 255, 255) );
+    background-image: linear-gradient(to right,rgb(19, 0, 48), rgb(82, 138, 203) );
 }
 
 .header-txt{
     color: yellow !important;
+    font-size: larger;
 }
 
 .dark {
@@ -21,3 +23,11 @@ font-weight: bolder;
     background-color: #fff;
     color: rgb(19, 0, 48);
   }
+
+  .btn-width{
+    width: max-content;
+  }
+
+.link{
+    text-decoration: none;
+}
