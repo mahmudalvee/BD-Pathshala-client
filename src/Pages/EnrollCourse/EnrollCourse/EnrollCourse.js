@@ -14,8 +14,10 @@ const EnrollCourse = () => {
     }
     return (
         <div className='txt mt-3 bg-light rounded p-5'>   
-            <h1 className='text-center'><span className="badge rounded-pill text-bg-warning">Get Premium Access of '{title}'</span></h1>
-             <Form className='mt-2'>
+            <h1 className='text-center'><span className="badge rounded-pill text-bg-warning px-5 mb-3">Get Premium Access 
+            <p>of</p>
+            <p>'{title}'</p></span></h1>
+             <Form className='mt-2 w-75 mx-auto'>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Course Name</Form.Label>
                     <Form.Control readOnly defaultValue={title} type="text"/>

@@ -7,7 +7,6 @@ import './Course.css';
 
 const Course = () => {
     const course= useLoaderData();
-    console.log(course);
     const {_id, title, img, instructor, category_id, tags, email, category_name, description, fee, total_enroll} = course
     return (
         <div>
@@ -35,15 +34,15 @@ const Course = () => {
                 <h3 className='txt'>Instructor: {instructor}</h3>
                 <h5 className='text-dark'><i className="bi bi-envelope-check"></i>: {email}</h5>
                 <h4 className='txt'><i className="bi bi-people-fill"></i> : {total_enroll} students</h4>
-                <Card.Footer className="d-flex justify-content-between mt-3">
+                <Card.Footer className="d-lg-flex d-sm-grid App justify-content-between mt-3">
                     <div className='my-auto'>
-                        <h1><span className="badge rounded-pill text-bg-primary">Course fee: {fee}</span></h1>
+                        <h3><span className="badge rounded-pill text-bg-primary">Course fee: {fee}</span></h3>
                     </div>
                     <div>
-                    <Link to={`/enroll-course/${_id}`}><Button className=" fs-3 shadow-lg rounded btn-width txt trans" variant="warning"><i className="bi bi-gift-fill txt"></i> Get Premium Access</Button></Link>
+                    <Link to={`/enroll-course/${_id}`}><Button className=" fs-4 shadow-lg rounded btn-width txt trans" variant="warning"><i className="bi bi-gift-fill txt"></i> Get Premium Access</Button></Link>
                     </div>
                 </Card.Footer>
-                <div className='text-center'>
+                <div className='text-center mt-2'>
                 <Link to={`/course-category/${category_id}`}>
                     <button type="button" className="btn btn-outline-dark  shadow-sm rounded fs-5">Similar Courses</button>
                 </Link>
