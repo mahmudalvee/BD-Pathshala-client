@@ -2,7 +2,6 @@ import React from "react";
 import { Row } from "react-bootstrap";
 import { useLoaderData } from "react-router-dom";
 import CourseSummaryCard from "../Shared/CourseSummaryCard/CourseSummaryCard";
-import "./Home.css";
 
 const Home = () => {
   const allcourses = useLoaderData();

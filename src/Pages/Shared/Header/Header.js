@@ -39,13 +39,13 @@ const Header = () => {
         <Navbar.Toggle className='header-txt' aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse className='header-txt' id="responsive-navbar-nav">
           <Nav className="ms-auto me-auto">
-            <Nav.Link href="#features" className='header-txt fw-semibold'>Courses</Nav.Link>
+              <Link  to='/allcourses' className='link header-txt fw-semibold m-auto'>Courses</Link>
             <Nav.Link href="#pricing" className='header-txt fw-semibold'>FAQ</Nav.Link>
             <Nav.Link href="#pricing" className='header-txt fw-semibold'>Blog</Nav.Link>
           </Nav>
           <Nav>
           <Button className="my-sm-2 fw-bold shadow rounded btn-width" variant="warning"><i className="bi bi-person-bounding-box"></i> Log in</Button>
-          <Button variant="outline-dark" onClick={toggleTheme} className=' ms-lg-2 fs-5 bi bi-palette-fill '></Button>
+          <Button variant="outline-dark" onClick={toggleTheme} className=' ms-lg-2 fs-3 bi bi-toggles'></Button>
           </Nav>
           <div className='d-lg-none'>
             <LeftSideNav></LeftSideNav>

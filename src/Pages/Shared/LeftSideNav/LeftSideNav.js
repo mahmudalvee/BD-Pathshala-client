@@ -13,7 +13,7 @@ const LeftSideNav = () => {
   }, []);
 
   return (
-    <div className="App">
+    <div className="App my-3">
       <ListGroup>
       <ListGroup.Item className="bg-warning txt-link-head"><h3>All Courses: {categories.length}</h3></ListGroup.Item>
             {
