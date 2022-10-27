@@ -35,7 +35,7 @@ const Course = () => {
                 <h3 className='txt'>Instructor: {instructor}</h3>
                 <h5 className='text-dark'><i className="bi bi-envelope-check"></i>: {email}</h5>
                 <h4 className='txt'><i className="bi bi-people-fill"></i> : {total_enroll} students</h4>
-                <Card.Footer className="d-flex justify-content-between">
+                <Card.Footer className="d-flex justify-content-between mt-3">
                     <div className='my-auto'>
                         <h1><span className="badge rounded-pill text-bg-primary">Course fee: {fee}</span></h1>
                     </div>

@@ -2,12 +2,16 @@ import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import toast from 'react-hot-toast';
 
 import './EnrollCourse.css';
 
 const EnrollCourse = () => {
     const course= useLoaderData();
     const {_id, title, img, instructor, category_id, category_name, description, fee, total_enroll} = course;
+    const handleSubmit= () =>{
+        toast.success('Thank you for Purchasing the Course. We will contact you ASAP! 😃');
+    }
     return (
         <div className='txt mt-3 bg-light rounded p-5'>   
             <h1 className='text-center'><span className="badge rounded-pill text-bg-warning">Get Premium Access of '{title}'</span></h1>
@@ -56,7 +60,13 @@ const EnrollCourse = () => {
                     <Form.Control type="text" placeholder="Transaction ID" />
                 </Form.Group>
 
-                <Button type="submit" className="fs-4 shadow rounded btn-width txt trans" variant="warning"><i className="bi bi-gift-fill txt"></i> Payment Complete</Button>
+                <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                    <Form.Check type="checkbox" label="I have provided all information correctly & completed my payment" />
+                </Form.Group>
+
+                <div className='text-center'>
+                    <Button onClick={handleSubmit} className="fs-4 shadow rounded btn-width txt trans" variant="warning"><i className="bi bi-bag-check-fill txt"></i> Payment Completed</Button>
+                </div>
             </Form>   
         </div>
     );
