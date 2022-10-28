@@ -27,7 +27,7 @@ const Register = () => {
                 setError('');
                 form.reset();
                 handleUpdateUserProfile(name, photoURL);
-                toast.success('Registration Successful!');
+                toast.success('Registration Successful! 👏');
             })
             .catch(e => {
                 console.error(e);
@@ -53,8 +53,8 @@ const Register = () => {
     return (
         <Form onSubmit={handleSubmit}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Your Name</Form.Label>
-                <Form.Control name="name" type="text" placeholder="Your Name" />
+                <Form.Label>Full Name</Form.Label>
+                <Form.Control name="name" type="text" placeholder="Full Name" />
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Photo URL</Form.Label>
@@ -76,7 +76,7 @@ const Register = () => {
                     onClick={handleAccepted}
                     label={<>I provided all the information correctly.</>} />
             </Form.Group>
-            <Button variant="primary" type="submit" disabled={!accepted}>
+            <Button variant="warning" type="submit" className='fs-4 fw-semibold' disabled={!accepted}>
                 Register
             </Button>
             <Form.Text className="text-danger">

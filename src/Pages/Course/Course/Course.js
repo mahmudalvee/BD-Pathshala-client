@@ -10,20 +10,6 @@ import "./Course.css";
 
 const ref = React.createRef();
 
-function App() {
-  return (
-    <div className="App">
-      <Pdf targetRef={ref} filename="code-example.pdf">
-        {({ toPdf }) => <button onClick={toPdf}>Generate Pdf</button>}
-      </Pdf>
-      <div ref={ref}>
-        <h1>Hello CodeSandbox</h1>
-        <h2>Start editing to see some magic happen!</h2>
-      </div>
-    </div>
-  );
-}
-
 // pdf converter
 
 const Course = () => {
@@ -44,7 +30,7 @@ const Course = () => {
   return (
     <div>
       <div className="card-header text-end">
-        <Pdf targetRef={ref} filename="code-example.pdf">
+        <Pdf targetRef={ref} filename="course-details.pdf">
           {({ toPdf }) => <Button
         onClick={toPdf}
           className=" fs-4 shadow rounded btn-width txt trans"

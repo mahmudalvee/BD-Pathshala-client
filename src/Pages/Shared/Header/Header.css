@@ -5,6 +5,19 @@ font-weight: bolder;
 font-size: xx-large;
 }
 
+.nav-txt-title{
+  color: yellow !important;
+font-family: 'CharukolaUltraLight', sans-serif !important;
+font-weight:900;
+font-size: x-large;
+}
+.nav-txt-title:hover{
+
+  box-shadow: 0px 0px 0px 0px #e9ecef;
+  transform: scale(1.1);
+}
+
+
 .header-bg{
     width: 100%;
     background-image: linear-gradient(to right,rgb(19, 0, 48), rgb(82, 138, 203) );

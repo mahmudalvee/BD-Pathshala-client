@@ -10,6 +10,8 @@ import "./Header.css";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../contexts/AuthProvider/AuthProvider";
 import Image from "react-bootstrap/Image";
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import Dropdown from 'react-bootstrap/Dropdown';
 
 const Header = () => {
   const [theme, setTheme] = useState("light");
@@ -57,60 +59,67 @@ const Header = () => {
           className="header-txt"
           aria-controls="responsive-navbar-nav"
         />
-        <Navbar.Collapse className="header-txt" id="responsive-navbar-nav">
+        <Navbar.Collapse className="header-txt mx-sm-auto" id="responsive-navbar-nav">
           <Nav className="ms-auto me-auto">
             <Link
               to="/allcourses"
-              className="link header-txt fw-semibold m-auto me-lg-3"
+              className="link nav-txt-title fw-semibold m-auto me-lg-3"
             >
               Courses
             </Link>
             <Link
               to="/faq"
-              className="link header-txt fw-semibold m-auto me-lg-3"
+              className="link nav-txt-title fw-semibold m-auto me-lg-3"
             >
               FAQ
             </Link>
-            <Link to="/blog" className="link header-txt fw-semibold m-auto">
+            <Link to="/blog" className="link nav-txt-title fw-semibold m-auto">
               Blog
             </Link>
           </Nav>
           <Nav>
             <Nav className="header-txt mx-auto mt-sm-4 me-lg-1 my-auto">
             <>
-                {
-                    user?.uid ?
-                        <>
-                            <span>{user?.displayName}</span>
-                            <span className="mx-auto my-auto">
-                            {user?.photoURL ?
-                                <Image
-                                    style={{ height: '35px' }}
-                                    roundedCircle
-                                    src={user?.photoURL}>
-                                </Image>
-                                : <i className="bi bi-person-bounding-box"></i>
-                            }
-                            </span>
+            {
+                user?.uid ?
+                    <>
+                        <span className="mx-auto my-auto">
+                        {user?.photoURL ?
+                            <Dropdown as={ButtonGroup}>
+                              <Image
+                                className="me-lg-1"
+                                style={{ height: '40px' }}
+                                roundedCircle
+                                src={user?.photoURL}>
+                            </Image>
+                            <Dropdown.Toggle split variant="warning" id="dropdown-split-basic" />
+                            <Dropdown.Menu className="bg-warning">
+                            <Dropdown.Item>{user?.displayName}</Dropdown.Item>
+                            </Dropdown.Menu>
+                            </Dropdown>
                             
-                            <Button
-                              className="ms-lg-2 my-lg-auto mx-auto link my-sm-2 fw-bold btn-width"
-                              variant="warning" onClick={handleLogOut}>
-                                Log out
-                            </Button>
-                        </>
-                        :
-                        <>
-                            <Button
-                              className="my-lg-auto mx-auto link my-sm-2 fw-bold shadow rounded btn-width"
-                              variant="warning"
-                            >
-                              <Link to="/login" className="link">
-                                Login
-                              </Link>
-                            </Button>
-                        </>
-                }
+                            : <i className="bi bi-person-bounding-box"></i>
+                        }
+                        </span>
+                        
+                        <Button
+                          className="ms-lg-2 my-lg-auto mx-auto link my-sm-2 fw-bold btn-width"
+                          variant="warning" onClick={handleLogOut}>
+                            Log out
+                        </Button>
+                    </>
+                    :
+                    <>
+                        <Button
+                          className="my-lg-auto mx-auto link my-sm-2 fw-bold shadow rounded btn-width"
+                          variant="warning"
+                        >
+                          <Link to="/login" className="link">
+                            Login
+                          </Link>
+                        </Button>
+                    </>
+            }
               </>
               
               
@@ -118,7 +127,7 @@ const Header = () => {
             <Button
               variant="outline-dark"
               onClick={toggleTheme}
-              className=" ms-lg-2 fs-3 bi bi-toggles"
+              className=" my-lg-auto mx-auto link my-sm-5 fw-bold shadow rounded btn-width fs-3 bi bi-toggles"
             ></Button>
           </Nav>
           <div className="d-lg-none">
