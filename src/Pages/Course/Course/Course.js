@@ -11,7 +11,7 @@ const Course = () => {
     return (
         <div>
             <div className="card-header text-end">
-                <Button className=" fs-4 shadow rounded btn-width txt trans" variant="warning"><i className="bi bi-file-earmark-arrow-down-fill txt"></i> Get Details</Button>
+            <Link to={`/get-details-course/${_id}`}><Button className=" fs-4 shadow rounded btn-width txt trans" variant="warning"><i className="bi bi-file-earmark-arrow-down-fill txt"></i> Get Details</Button></Link>
             </div>
             <Card>
             <Card.Img variant="top" className='img-fluid rounded mx-auto d-block' src={img} />
