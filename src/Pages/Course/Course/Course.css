@@ -16,3 +16,9 @@
 ul{
     list-style-type: square;
   }
+  .pdfStyle {
+    font-family: sans-serif;
+    text-align: center;
+  }
+  
+
